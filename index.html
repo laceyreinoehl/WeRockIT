@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Technology conference located in Huntsville Alabama focused on highlighting diversity in the tech industry">
@@ -20,18 +19,23 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
-
     <!-- Custom styles for this template -->
     <link href="css/new-age.min.css" rel="stylesheet">
 
-    <script src="/__/firebase/4.12.0/firebase-app.js"></script>
+   <!-- <script src="/__/firebase/4.12.0/firebase-app.js"></script>
     <script src="/__/firebase/4.12.0/firebase-auth.js"></script>
     <script src="/__/firebase/4.12.0/firebase-database.js"></script>
     <script src="/__/firebase/4.12.0/firebase-messaging.js"></script>
     <script src="/__/firebase/4.12.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>-->
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!--<script src = "js/weRockIt.js"></script>-->
   </head>
 
   <body id="page-top">
@@ -49,13 +53,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#mailingList">Get Updates</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="sponsorship_levels.html">Call for Sponsors</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#speakers">Speakers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#mailingList">Get Updates</a>
             </li>
           </ul>
         </div>
@@ -131,18 +135,59 @@
         <div class="overlay"></div>
     </section>
 
-    <section id = "sponsors" class = 'bg-wwc-teal'>
+    <section id = "sponsorshipLevels" class = "bg-wwc-teal">
         <div class = "container">
+            <h2>Sponsorship Opportunities</h2>
             <div class = "row">
-                <div class = "col-md-10 mx-auto">
-                    <h2 class = "section-heading">Sponsor WeRockIT</h2>
-                    <p>
-                        Companies, are you looking for an opportunity to engage with hundreds of diverse individuals in tech?
-                        Please contact us using the form below. We will get back to you as soon as possible.
-                    </p>
+                <div class = "col-lg-4">
+                    <h3>Platinum | $10,000</h3>
+                    <p>2 opportunities available</p>
+                    <ul>
+                        <li>All Gold-level benefits</li>
+                        <li>Recognition as a premium sponsor of the Conference, with highest priority branding among sponsor levels</li>
+                        <li>Provision of a venue Program Room, serving as an exhibition suite (Note: Standard furniture and AV equipment are provided.
+                            All other internal furnishings, support equipment, and specialty catering (if desired) are the responsibility of the sponsor)</li>
+                        <li>Opportunity to select 1 speaker or panel in sponsor's program room</li>
+                        <li>Logo included in all event collateral including Conference website homepage</li>
+                        <li>Ongoing promotion via WeRockIT social media outlets, including Facebook, Twitter and LinkedIn</li>
+                        <li>Promotion to media and press outlets as a major supporter of the Conference</li>
+                        <li>Opportunity for small brochure inserts in delegate bags</li>
+                        <li>5 total complimentary conference registrations</li>
+                    </ul>
                 </div>
+                <div class = "col-lg-4">
+                    <h3>Gold | $5,000</h3>
+                    <ul>
+                        <li>Logo included in all event communication including Conference website sponsor section (with web link), brochure, flyers, etc.</li>
+                        <li>Logo included in pre-conference print and digital campaigns.</li>
+                        <li>One time promotion via WeRockIT social media outlets, including Facebook, Twitter and LinkedIn</li>
+                        <li>Logo included in press releases and pitching efforts</li>
+                        <li>Logo included on signage in coffee break and breakfast areas</li>
+                        <li>4 complimentary conference registrations</li>
+                    </ul>
+                </div>
+                <div class = "col-lg-4">
+                    <h3>Silver | $3,000</h3>
+                    <ul>
+                        <li>Logo included in Conference Website sponsor section (with web link)</li>
+                        <li>Logo included in all on-site event materials including on-site Conference Program event signage</li>
+                        <li>Opportunity to place company material on sponsor table at the Conference</li>
+                        <li>1 complimentary conference registration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "text-center">
+                <a href = "sponsorship_levels.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id = "beASponsor" class = "bg-wwc-purple">
+        <div class = "container">
+            <h2>Sponsor WeRockIT 2019</h2>
+            <div class = "row">
                 <div class = "col-md-10 mx-auto ">
-                    <form>
+                    <form id = "sponsorshipEmailForm">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
                             <input type="text" class="form-control" id="firstName" placeholder="First Name">
@@ -170,6 +215,21 @@
             </div>
         </div>
     </section>
+
+    <section id = "platinumSponsors">
+        <div class = "container">
+            <h2>Platinum Sponsors</h2>
+            <div class = "row">
+                <div class = "col-lg-4">
+                    <img src = "img/yourLogoHere.png" alt = "Your Logo Here" class = "img-fluid"/>
+                </div>
+                <div class = "col-lg-4">
+                    <img src = "img/yourLogoHere.png" alt = "Your Logo Here" class = "img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="downtownHuntsville">
         <div class="downtownHuntsville-content">
@@ -306,17 +366,8 @@
         </ul>-->
       </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/new-age.min.js"></script>
-
   </body>
 
+  <!-- Custom scripts for this template -->
+  <script src="js/new-age.min.js"></script>
 </html>
