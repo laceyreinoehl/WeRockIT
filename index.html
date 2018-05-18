@@ -35,7 +35,7 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!--<script src = "js/weRockIt.js"></script>-->
+    <script src = "js/weRockIt.js"></script>
   </head>
 
   <body id="page-top">
@@ -72,7 +72,7 @@
       </div>
     </nav>
 
-    <header class="masthead">
+    <header class="masthead masthead-background">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-10 my-auto mx-auto">
@@ -101,7 +101,7 @@
                   our guests. Our mission is to <strong>showcase</strong> and grow <strong>diverse</strong> voices in technology.
             </p>
             <p>
-                This conference is being organized by <a href = 'https://www.facebook.com/groups/WWCodeHSV/' target = "WWC-Facebook">Women Who Code Huntsville</a>.
+                This conference is being organized by members of  <a href = 'https://www.facebook.com/groups/WWCodeHSV/' target = "WWC-Facebook">Women Who Code Huntsville</a>.
                 WWCode Huntsville is a group of developers,engineers, and business professionals in the Huntsville area. WeRockIT Conf
                 will include a <strong>mix</strong> of panel discussions, keynotes, speakers, and hands-on workshops.
             </p>
@@ -126,8 +126,11 @@
             <p>Sign up for our mailing list. Don't miss the buzz about our speakers, sessions and events! Sign up below to get the latest news about
               the WeRockIT Conf right in your inbox. </p>
             <div>
-                <input type="email"  id="mailingListEmail" aria-describedby="emailHelp" placeholder="youremail@domain.com">
-                <a href="#" class="btn btn-outline-dark btn-xl js-scroll-trigger">SIGN UP!</a>
+                <form id = "test-form">
+                    <input style="width: 400px;" type="email" name = "emailAddress"  id="emailAddress" aria-describedby="emailHelp" placeholder="youremail@domain.com">
+                    <!--<a id = "emaiListSubmit" class="btn btn-outline-dark btn-xl js-scroll-trigger">SIGN UP!</a>-->
+                    <button type = "submit" id = "submit-form" class="btn btn-outline-dark btn-xl js-scroll-trigger">SIGN UP!</button>
+                </form>
             </div>
           </div>
         </div>
@@ -184,7 +187,7 @@
         </div>
     </section>
 
-    <section id = "beASponsor" class = "bg-wwc-purple">
+    <!--<section id = "beASponsor" class = "bg-wwc-purple">
         <div class = "container">
             <h2>Sponsor WeRockIT 2019</h2>
             <div class = "row">
@@ -199,8 +202,8 @@
                             <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                         </div>
                         <div class="form-group">
-                            <label for="emailAddress">Email Address *</label>
-                            <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="you@company.com">
+                            <label for="emailAddressContact">Email Address *</label>
+                            <input type="email" class="form-control" id="emailAddressContact" aria-describedby="emailHelp" placeholder="you@company.com">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
@@ -216,7 +219,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id = "diamondSposnors">
         <div class = "container">

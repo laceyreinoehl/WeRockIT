@@ -1,63 +1,48 @@
 $(function () {
-    // Initialize Firebase
-    var config = {
-        apiKey : "AIzaSyB07JqijHmGDtlGrR4mxJ7FWpGdKuXqGG4",
-        authDomain: "werockit-conf-website.firebaseapp.com",
-        databaseURL: "https://werockit-conf-website.firebaseio.com",
-        projectId: "werockit-conf-website",
-        storageBucket: "werockit-conf-website.appspot.com",
-        messagingSenderId: "801649081419"
-    };
-    firebase.initializeApp(config);
 
-//Reference messages collection
-    var messagesRef = firebase.database().ref("messages");
+    $(document).on('submit', '#test-form', submitToMailingList);
+    $(document).on('submit', '#sponsorshipEmailForm', submitSponsorForm);
 
-    var sponsorshipEmailForm = document.getElementById("sponsorshipEmailForm");
-    sponsorshipEmailForm.addEventListener("submit", submitSponsorshipForm);
-
-    /**
-     * Submit Sponsorship Email form
-     * @param event
-     */
-    function submitSponsorshipForm(event){
+    function submitToMailingList(event) {
         event.preventDefault();
-
-        //Get values
-        var firstName = getInputValues("firstName");
-        var lastName = getInputValues("lastName");
-        var email = getInputValues("email");
-        var company = getInputValues("company");
-        var message = getInputValues("message");
-
-        saveMessage(firstName, lastName, email, company, message);
+        var form = $('form#test-form'),
+            url = 'https://script.google.com/macros/s/AKfycbz0nWMxmjxxguJski_acVi0VDUZBtDAGBxRhIzcjZU65Tedo9I/exec';
+        $.get(url, form.serialize())
+            .done(function (response) {
+                debugger;
+            })
+            .fail(function () {
+                debugger;
+            });
     }
 
-    /**
-     * Get values from form
-     * @param id
-     * @returns {*}
-     */
-    function getInputValues(id){
-        return document.getElementById(id).value;
-    }
-
-    /**
-     * Save message to firebase
-     * @param firstName
-     * @param lastName
-     * @param email
-     * @param company
-     * @param message
-     */
-    function saveMessage(firstName, lastName, email, company, message){
-        var newMessageRef = messagesRef.push();
-        newMessageRef.set({
-            firstName : firstName,
-            lastName: lastName,
-            email: email,
-            company: company,
-            message: message
-        });
+    function submitSponsorForm(event){
+        event.preventDefault();
+        var form = $('form#sponsorshipEmailForm'),
+            url = 'https://script.google.com/macros/s/AKfycbzz7ZuItYGczN943eoRWZ3o1-qdv7a0lp27mIneYUm5pl4nBYix/exec';
+        $.get(url, form.serialize())
+            .done(function (response) {
+                debugger;
+            })
+            .fail(function () {
+                debugger;
+            });
     }
 });
+
+
+/*
+
+
+$('#submit-form').on('click', function(e) {
+    debugger;
+    e.preventDefault();
+   /!* var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+    }).success(
+        // do something
+    );*!/
+});*/
