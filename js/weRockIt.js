@@ -21,7 +21,7 @@ $(function () {
     }
 
     /**
-     * 
+     *
      * @param event
      */
     function submitSponsorForm(event){
@@ -37,20 +37,3 @@ $(function () {
             });
     }
 });
-
-
-/*
-
-
-$('#submit-form').on('click', function(e) {
-    debugger;
-    e.preventDefault();
-   /!* var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-    }).success(
-        // do something
-    );*!/
-});*/
