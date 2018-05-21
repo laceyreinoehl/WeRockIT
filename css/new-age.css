@@ -541,3 +541,35 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     border-color: #a63569;
     background-color: #a63569;
 }
+
+#mailingListThankYou{
+  margin-top: 10px;
+  color: #00B6AA;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#mailingListError{
+  margin-top: 10px;
+  color: #d73925;
+  border: 1px solid #d73925;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#sponsorInquiryFormThankYou{
+  margin-top: 10px;
+  color: #00B6AA;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#sponsorInquiryFormError{
+  margin-top: 10px;
+  color: #d73925;
+  border: 1px solid #d73925;
+  border-radius: 10px;
+  padding: 10px;
+}

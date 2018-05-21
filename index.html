@@ -77,7 +77,7 @@
         <div class="row h-100">
           <div class="col-md-10 my-auto mx-auto">
             <div class="text-center">
-                <img src = "img/WeRockIT_black.png" alt = "weRockIT Logo" height = "500"/>
+                <img src = "img/WeRockIT_black.png" alt = "weRockIT Logo" class = "img-responsive img-fluid"/>
                 <!--<h1 class="display-1">WeRockIT Conf 2019</h1>-->
                 <h2>Don't miss this awesome new tech event.</h2>
                 <h3><span class = 'fa fa-map-marker'></span> &nbsp; Huntsville, AL</h3>
@@ -130,6 +130,12 @@
                     <input style="width: 400px;" type="email" name = "emailAddress"  id="emailAddress" aria-describedby="emailHelp" placeholder="youremail@domain.com">
                     <!--<a id = "emaiListSubmit" class="btn btn-outline-dark btn-xl js-scroll-trigger">SIGN UP!</a>-->
                     <button type = "submit" id = "submit-form" class="btn btn-outline-dark btn-xl js-scroll-trigger">SIGN UP!</button>
+                    <div class = "row" id = 'mailingListThankYou' style = "display: none">
+                        <h3>Thank you! Don't forget to follow us on Facebook, Twitter, and Instagram!</h3>
+                    </div>
+                    <div class = "row" id = 'mailingListError' style = "display: none">
+                        <h3>Uh oh! Something went wrong. Please send us an email directly at <a href = 'mailto:werockitconf@gmail.com'>werockitconf@gmail.com</a> to get connected.</h3>
+                    </div>
                 </form>
             </div>
           </div>
