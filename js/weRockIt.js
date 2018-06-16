@@ -2,6 +2,7 @@ $(function () {
 
     $(document).on('submit', '#test-form', submitToMailingList);
     $(document).on('submit', '#sponsorshipEmailForm', submitSponsorForm);
+    $(document).on('submit', '#anonymousReportForm', submitAnonymousReportForm);
 
     /**
      *
@@ -34,6 +35,23 @@ $(function () {
             })
             .fail(function () {
                 $("#sponsorInquiryFormError").slideDown();
+            });
+    }
+
+    /**
+     *
+     * @param event
+     */
+    function submitAnonymousReportForm(event){
+        event.preventDefault();
+        var form = $('form#anonymousReportForm'),
+            url = 'https://script.google.com/macros/s/AKfycbwBQzT74vJghu1oVzvTIrG9wOl4oG7OijLIQbJFtj691hunEcI/exec';
+        $.get(url, form.serialize())
+            .done(function () {
+                $("#anonymousReportFormReceived").slideDown();
+            })
+            .fail(function () {
+                $("#anonymousReportFormError").slideDown();
             });
     }
 });
