@@ -46,7 +46,7 @@ $(function () {
         event.preventDefault();
         var form = $('form#anonymousReportForm'),
             url = 'https://script.google.com/macros/s/AKfycbwBQzT74vJghu1oVzvTIrG9wOl4oG7OijLIQbJFtj691hunEcI/exec';
-        $.get(url, form.serialize())
+        $.get(url, form.find("#description").val())
             .done(function () {
                 $("#anonymousReportFormReceived").slideDown();
             })
