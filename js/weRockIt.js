@@ -45,8 +45,8 @@ $(function () {
     function submitAnonymousReportForm(event){
         event.preventDefault();
         var form = $('form#anonymousReportForm'),
-            url = 'https://script.google.com/macros/s/AKfycbwBQzT74vJghu1oVzvTIrG9wOl4oG7OijLIQbJFtj691hunEcI/exec';
-        $.get(url, form.find("#description").val())
+            url = 'https://script.google.com/macros/s/AKfycbzvCiiUaWzlDU883InliBan-dinyBsc7R4RMqvt4su8LKx0aVRE/exec';
+        $.get(url, form.serialize())
             .done(function () {
                 $("#anonymousReportFormReceived").slideDown();
             })
